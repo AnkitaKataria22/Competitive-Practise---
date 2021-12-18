@@ -1,0 +1,33 @@
+package com.company;
+
+public class PeakIndexInMountain {
+    public static void main(String[] args) {
+        int[] arr={0,2,5,7,1,0};
+        int a=peakInedxInMountainArray(arr);
+        System.out.println(a);
+    }
+     static int peakInedxInMountainArray(int[] arr) {
+        int ans=0;
+        ans=maximumOfArray(arr);
+        return ans;
+    }
+    static int maximumOfArray(int[] arr){
+        int ans=0;
+        int start=0;
+        int end=arr.length-1;
+
+        while(start<end){
+            int mid=start+(end-start)/2;
+            if(arr[mid]>arr[mid+1]){
+                end=mid;
+            }else {
+                start=mid+1;
+            }
+            if (start == end) {
+
+                ans=start;
+                break;
+            }
+        }
+        return ans;
+    }
