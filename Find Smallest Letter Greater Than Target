@@ -1,0 +1,27 @@
+package com.company;
+
+public class letter {
+    public static void main(String[] args) {
+        char[] nums={'e','n','n','n'};
+        char target='n';
+        char a= (char) program1(nums,target);
+        System.out.println(a);
+    }
+    static int program1(char[] letters, char target) {
+        if(target>=letters[letters.length-1]){
+            return letters[0];
+        }
+        int start=0;
+        int end=letters.length-1;
+        while(start<end){
+            int mid=start+(end-start)/2;
+
+            if(letters[mid]<=target){
+                start=mid+1;
+            }else{
+                end=mid;
+            }
+        }
+        return letters[start];
+    }
+}
