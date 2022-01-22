@@ -28,8 +28,9 @@ public class PeakIndexInMountain {
             }
             if (start == end) {
 
-                ans=start;
-                break;
+                //ans=start;
+               // break;
+               return start;
             }
         }
         return ans;
