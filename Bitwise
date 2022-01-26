@@ -1,0 +1,24 @@
+package com.company;
+
+public class isEvenOddUsingBITWISE {
+    public static void main(String[] args) {
+        int a=45;
+        int[] arr={1,2,6,4,2,1,6};
+        System.out.println(isodd(a));
+        System.out.println(uniquenumber(arr));
+    }
+
+    private static int uniquenumber(int[] arr) {
+        //FIND UNIQUE NUMBER IN AN ARRAY OF DUPLICATE
+        int unique=0;
+        for(int n:arr){
+            unique^=n;
+        }
+        return unique;
+    }
+
+    private static boolean isodd(int a) {
+        //TELL US WHETHEAR A NUMBER IS ODD OR NOT
+        return (a&1)==1;
+    }
+}
