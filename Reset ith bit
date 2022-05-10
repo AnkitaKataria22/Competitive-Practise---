@@ -1,0 +1,21 @@
+package com.company;
+//reset means covert the ith bit to 0 it is 1 and if it 0 remain it 0 only
+public class Resetithbit {
+    public static void main(String[] args) {
+        int N=86;
+        int ith=5;
+        System.out.println(reset(N,ith));
+
+    }
+    private static int reset(int N,int n){
+        return N & mask(n);
+
+    }
+        private static int  mask(int n)
+    {
+        int a= (1<<(n-1));
+        int ans=~(a);
+
+        return ans;
+    }
+}
